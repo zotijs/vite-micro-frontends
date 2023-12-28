@@ -8,8 +8,9 @@
     "serve": "pnpm --parallel --filter \"./**\" preview",
     "build:remotes": "pnpm --parallel --filter \"./remotes/**\" build",
     "serve:remotes": "pnpm --parallel --filter \"./remotes/**\" serve",
-    "dev:hosts": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 5000,5001,5002"
+    "dev:host": "pnpm --filter \"./host\" dev",
+    "stop": "kill-port --port 5000,5001,5002",
+    "add:module": "pnpm add -r"
   },
   "keywords": [
     "mfe",

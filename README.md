@@ -34,7 +34,15 @@ A react application that will act like the host, the application that will combi
 
 Generated using `pnpm create vite host --template react-swc-ts`
 
-## Commands
+## Commands (Top Level)
+
+- `build`: builds the host and the remotes of the workspace
+- `serve`: serves the host and the remotes of the workspace
+- `build:remotes`: builds only the remotes of the workspace
+- `serve:remotes`: serves only the remotes of the workspace
+- `dev:host`: run host in dev mode
+- `stop`: kills the processes of the defined ports
+- `add:module`: adds a module recursively in every project of a workspace, excluding the root project, [docs](https://pnpm.io/cli/recursive). Usage: `pnpm add:module <module_name>`.
 
 ## Resources
 
