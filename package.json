@@ -9,7 +9,7 @@
     "build:remotes": "pnpm --parallel --filter \"./remotes/**\" build",
     "serve:remotes": "pnpm --parallel --filter \"./remotes/**\" serve",
     "dev:hosts": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 5000,5001"
+    "stop": "kill-port --port 5000,5001,5002"
   },
   "keywords": [
     "mfe",
@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@originjs/vite-plugin-federation": "^1.3.2",
+    "@originjs/vite-plugin-federation": "^1.3.3",
     "kill-port": "^2.0.1"
   }
 }

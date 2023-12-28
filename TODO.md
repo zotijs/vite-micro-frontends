@@ -1,0 +1,2 @@
+- Share remotes types with host
+- Share state

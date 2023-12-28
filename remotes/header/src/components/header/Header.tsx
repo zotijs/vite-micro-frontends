@@ -20,7 +20,7 @@ export const Header = ({ logoSrc, appName }: HeaderProps) => (
       gap: 16,
     }}
   >
-    <img src={logoSrc} alt={`${appName} logo`} />
+    <img src={logoSrc} alt={`${appName} logo`} style={{ height: 32 }} />
     <h4>{appName}</h4>
   </header>
 );

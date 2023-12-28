@@ -1,5 +1,5 @@
-import Header from "remoteHeader/Header";
-import Footer from "remoteFooter/Footer";
+import { Header } from "remoteHeader/Header";
+import { Footer } from "remoteFooter/Footer";
 
 const APP_NAME = "Module Federations Example";
 const LOGO_URL =
