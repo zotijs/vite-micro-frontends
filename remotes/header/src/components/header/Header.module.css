@@ -1,0 +1,13 @@
+.container {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+}
+
+.container > img {
+  height: 32px;
+}
