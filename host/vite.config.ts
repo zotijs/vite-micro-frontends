@@ -13,7 +13,7 @@ export default defineConfig({
         remoteFooter: "http://localhost:5002/assets/footerRemoteEntry.js",
         remoteCounter: "http://localhost:5003/assets/counterRemoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: ["@reduxjs/toolkit", "react", "react-dom", "react-redux"],
     }),
   ],
   build: {
