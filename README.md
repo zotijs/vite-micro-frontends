@@ -18,15 +18,23 @@ The micro apps that will be used by the host. This structure, with a single host
 
 ### Header
 
-A react application for where we are going to import a `Header` component.
+A react application from where we are going to import a `Header` component.
 
 Generated using `pnpm create vite header --template react-swc-ts`
 
 ### Footer
 
-A react application for where we are going to import a `Footer` component.
+A react application from where we are going to import a `Footer` component.
 
 Generated using `pnpm create vite footer --template react-swc-ts`
+
+### Counter
+
+A react application from where we are going to import a `Counter` component.
+
+This is a stateful component that uses redux as the state management tool. In order to have a shared state between this remote and the host we are going to inject the counter reducer into the host's state. More info [here](https://github.com/module-federation/module-federation-examples/tree/master/redux-reducer-injection).
+
+Generated using `pnpm create vite counter --template react-swc-ts`
 
 ## Host
 

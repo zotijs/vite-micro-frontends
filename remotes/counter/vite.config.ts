@@ -7,12 +7,12 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "header_app",
-      filename: "headerRemoteEntry.js",
+      name: "counter_app",
+      filename: "counterRemoteEntry.js",
       exposes: {
-        "./Header": "./src/components/header/Header",
+        "./Counter": "./src/components/counter/Counter",
       },
-      shared: ["clsx", "react", "react-dom"],
+      shared: ["@reduxjs/toolkit", "clsx", "react", "react-dom", "react-redux"],
     }),
   ],
   build: {

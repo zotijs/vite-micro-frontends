@@ -1,0 +1,1 @@
+export { withModelActivation } from "./withModelActivation";
