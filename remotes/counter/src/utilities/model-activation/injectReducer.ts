@@ -18,9 +18,10 @@ export const injectReducer = <RootStore extends EnhancedReduxStore>(
   name: string,
   reducer: Reducer
 ) => {
-  const asyncReducers: Record<string, Reducer> = store.asyncReducers ?? {};
+  store.asyncReducers = {
+    ...(store.asyncReducers ?? {}),
+    [name]: reducer,
+  };
 
-  asyncReducers[name] = reducer;
-
-  store.replaceReducer(combineReducers(asyncReducers));
+  store.replaceReducer(combineReducers(store.asyncReducers));
 };

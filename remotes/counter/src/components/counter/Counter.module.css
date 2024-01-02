@@ -10,6 +10,7 @@ button {
   width: 56px;
   font-size: 3rem;
   line-height: 1rem;
+  cursor: pointer;
 }
 
 strong {
