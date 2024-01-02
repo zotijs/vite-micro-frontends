@@ -32,7 +32,7 @@ Generated using `pnpm create vite footer --template react-swc-ts`
 
 A react application from where we are going to import a `Counter` component.
 
-This is a stateful component that uses redux as the state management tool. In order to have a shared state between this remote and the host we are going to inject the counter reducer into the host's state. More info [here](https://github.com/module-federation/module-federation-examples/tree/master/redux-reducer-injection).
+This is a stateful component that uses redux as the state management tool. In order to have a shared state between this remote and the host we are going to inject the counter reducer into the host's store. More info [here](https://github.com/module-federation/module-federation-examples/tree/master/redux-reducer-injection).
 
 Generated using `pnpm create vite counter --template react-swc-ts`
 
