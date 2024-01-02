@@ -1,7 +1,8 @@
 .container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 button {
@@ -11,8 +12,6 @@ button {
   line-height: 1rem;
 }
 
-input {
-  height: 56px;
-  width: 98px;
-  border: unset;
+strong {
+  text-align: center;
 }

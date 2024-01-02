@@ -1,5 +1,6 @@
 import { Header } from "remoteHeader/Header";
 import { Footer } from "remoteFooter/Footer";
+import { WrappedCounter as Counter } from "remoteCounter/Counter";
 
 import styles from "./App.module.css";
 
@@ -11,7 +12,10 @@ const App = () => (
   <div className={styles.container}>
     <Header logoSrc={LOGO_URL} appName={APP_NAME} />
     <main>
-      <p>This is the only content that belongs to the host application</p>
+      <p>
+        This paragraph is the only content that belongs to the host application
+      </p>
+      <Counter />
     </main>
     <Footer appName={APP_NAME} />
   </div>

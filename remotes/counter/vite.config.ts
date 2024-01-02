@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         "./Counter": "./src/components/counter/Counter",
       },
-      shared: ["@reduxjs/toolkit", "react", "react-dom", "react-redux"],
+      shared: ["@reduxjs/toolkit", "clsx", "react", "react-dom", "react-redux"],
     }),
   ],
   build: {

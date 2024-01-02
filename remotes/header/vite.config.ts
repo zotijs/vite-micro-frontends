@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         "./Header": "./src/components/header/Header",
       },
-      shared: ["react", "react-dom"],
+      shared: ["clsx", "react", "react-dom"],
     }),
   ],
   build: {

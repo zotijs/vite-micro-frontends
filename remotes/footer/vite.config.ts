@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         "./Footer": "./src/components/footer/Footer",
       },
-      shared: ["react", "react-dom"],
+      shared: ["clsx", "react", "react-dom"],
     }),
   ],
   build: {

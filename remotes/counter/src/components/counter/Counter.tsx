@@ -13,7 +13,7 @@ import { withModelActivation } from "../../utilities/model-activation/withModelA
 import styles from "./Counter.module.css";
 
 type Props = {
-  value: ReturnType<typeof counterValue>;
+  counterValue: ReturnType<typeof counterValue>;
   incrementValue: typeof increment;
   decrementValue: typeof decrement;
   extraStyles?: string;
@@ -22,26 +22,22 @@ type Props = {
 const Counter = ({
   incrementValue,
   decrementValue,
-  value,
+  counterValue,
   extraStyles,
 }: Props) => (
   <div className={clsx(styles.container, extraStyles)}>
     <button onClick={() => decrementValue()}>-</button>
-    <input type="text" readOnly>
-      {value}
-    </input>
+    <strong>{counterValue}</strong>
     <button onClick={() => incrementValue()}>+</button>
   </div>
 );
 
-const WrappedCounter = compose<ComponentType>(
-  withModelActivation(counterReducer),
+export const WrappedCounter = compose<ComponentType>(
+  withModelActivation({ reducer: { name: "counter", value: counterReducer } }),
   connect(
-    ({ counter }: unknown & { counter: CounterState }) => ({
-      value: counter.value,
+    (state: unknown & { counter: CounterState }) => ({
+      counterValue: counterValue(state),
     }),
     { incrementValue: increment, decrementValue: decrement }
   )
 )(Counter);
-
-export default WrappedCounter;

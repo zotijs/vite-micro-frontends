@@ -1,19 +1,32 @@
 import { type Reducer } from "@reduxjs/toolkit";
-import { type ComponentType, useEffect } from "react";
+import {
+  type ComponentType,
+  type ContextType,
+  useEffect,
+  useContext,
+} from "react";
+import { ReactReduxContext } from "react-redux";
 import { injectReducer, type EnhancedReduxStore } from "./injectReducer";
 
-type PropsWithStore<P> = P & { store?: EnhancedReduxStore };
+export type ModelActivationOptions = {
+  reducer: { name: string; value: Reducer };
+};
 
 export const withModelActivation =
-  (reducer: Reducer) =>
-  <P,>(Component: ComponentType<P>) =>
-  (props: PropsWithStore<P>) => {
-    const { store } = props;
+  (options: ModelActivationOptions) =>
+  <P extends object>(Component: ComponentType<P>) =>
+  (props: P) => {
+    const { store } = useContext(ReactReduxContext) as ContextType<
+      typeof ReactReduxContext
+    > & { store: EnhancedReduxStore };
 
-    console.log(props);
+    const {
+      reducer: { name, value },
+    } = options;
+
     useEffect(() => {
-      !!store && !!reducer && injectReducer(store, reducer);
-    }, [store]);
+      !!store && !!value && injectReducer(store, name, value);
+    }, [store, name, value]);
 
     return <Component {...props} />;
   };

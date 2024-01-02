@@ -15,10 +15,12 @@ export type EnhancedReduxStore<
 
 export const injectReducer = <RootStore extends EnhancedReduxStore>(
   store: RootStore,
+  name: string,
   reducer: Reducer
 ) => {
-  const asyncReducers = store.asyncReducers ?? {};
+  const asyncReducers: Record<string, Reducer> = store.asyncReducers ?? {};
 
-  asyncReducers[reducer.name] = reducer;
+  asyncReducers[name] = reducer;
+
   store.replaceReducer(combineReducers(asyncReducers));
 };

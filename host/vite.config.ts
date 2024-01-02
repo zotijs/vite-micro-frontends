@@ -11,6 +11,7 @@ export default defineConfig({
       remotes: {
         remoteHeader: "http://localhost:5001/assets/headerRemoteEntry.js",
         remoteFooter: "http://localhost:5002/assets/footerRemoteEntry.js",
+        remoteCounter: "http://localhost:5003/assets/counterRemoteEntry.js",
       },
       shared: ["react", "react-dom"],
     }),

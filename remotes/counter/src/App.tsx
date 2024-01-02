@@ -8,15 +8,10 @@ const App = () => (
       justifyContent: "flex-start",
       height: "100vh",
       width: "100vw",
+      gap: "1rem",
     }}
   >
-    <p
-      style={{
-        height: "100%",
-      }}
-    >
-      Hello Counter
-    </p>
+    <p>Hello Counter</p>
     <Counter />
   </div>
 );
