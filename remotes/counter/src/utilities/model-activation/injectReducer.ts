@@ -11,7 +11,7 @@ export type EnhancedReduxStore<
   S = any,
   A extends Action<string> = UnknownAction,
   StateExt = unknown
-> = Store<S, A, StateExt> & { asyncReducers: ReturnType<Reducer> };
+> = Store<S, A, StateExt> & { asyncReducers: Record<string, Reducer> };
 
 export const injectReducer = <RootStore extends EnhancedReduxStore>(
   store: RootStore,
