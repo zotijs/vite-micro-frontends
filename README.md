@@ -52,9 +52,15 @@ Generated using `pnpm create vite host --template react-swc-ts`
 - `stop`: kills the processes of the defined ports
 - `add:module`: adds a module recursively in every project of a workspace, excluding the root project, [docs](https://pnpm.io/cli/recursive). Usage: `pnpm add:module <module_name>`.
 
+## Presentation
+
+The `presentation` repository contains a static application created using [astro](https://astro.build/) just for the presentation purposes and it is deployed as a GitHub page.
+
 ## Resources
 
+- https://microservices.io/
 - https://microfrontend.dev/
+- https://micro-frontends.org/
 - react-vite module federation example: https://github.com/originjs/vite-plugin-federation/tree/main/packages/examples/react-vite
 - vite guides: https://vitejs.dev/guide/
 - pnpm workspaces: https://pnpm.io/workspaces
