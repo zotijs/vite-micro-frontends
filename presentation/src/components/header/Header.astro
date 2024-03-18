@@ -1,0 +1,31 @@
+---
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<div class="container">
+  <a href="/">
+    <strong>{title}</strong>
+  </a>
+</div>
+<style>
+  .container {
+    padding: var(--space);
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    .container {
+      height: 48px;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+</style>

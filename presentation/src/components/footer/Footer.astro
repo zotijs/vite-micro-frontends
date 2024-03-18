@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import navigationBack from "./images/navigationBack.svg";
+
+type Props = {
+  previous?: { name: string; url: string };
+  next?: { name: string; url: string };
+};
+
+const { previous, next } = Astro.props;
+---
+
+<div class="footer-container">
+  <a href={previous?.url} class:list={["link", { disabled: !previous }]}>
+    <Image
+      src={navigationBack}
+      alt=`Go to ${!!previous ? previous?.name : "nowhere"}`
+      class="navigation-back-img"
+      height={16}
+      width={16}
+    />
+    {!!previous ? previous.name : ""}
+  </a>
+  <a href={next?.url} class:list={["link", { disabled: !next }]}>
+    {!!next ? next.name : ""}
+    <Image
+      src={navigationBack}
+      alt=`Go to ${!!next ? next?.name : 'nowhere'}`
+      class="navigation-img"
+      height={16}
+      width={16}
+    />
+  </a>
+</div>
+<style>
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px var(--space) 0px 0px;
+  }
+
+  .link {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(var(--white));
+    display: flex;
+    align-items: center;
+  }
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .navigation-img {
+    transform: rotate(180deg);
+  }
+</style>
