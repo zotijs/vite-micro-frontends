@@ -2,8 +2,11 @@
 layout: ../layouts/Layout.astro
 title: "Module Federation"
 previous:
-  { name: "Monolith vs Micro-frontend", url: "/monolithVsMicrofrontend" }
-next: { name: "The Example", url: "/example" }
+  {
+    name: "Monolith vs Micro-frontend",
+    url: "/vite-micro-frontends/monolithVsMicrofrontend",
+  }
+next: { name: "The Example", url: "/vite-micro-frontends/example" }
 ---
 
 # Module Federation

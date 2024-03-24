@@ -1,8 +1,11 @@
 export const orderedPages = [
-  { name: "Intro", url: "/" },
-  { name: "Pros and Cons", url: "/prosCons" },
-  { name: "Monolith vs Micro-frontend", url: "/monolithVsMicrofrontend" },
-  { name: "Module Federation", url: "/moduleFederation" },
-  { name: "The Example", url: "/example" },
-  { name: "Outro", url: "/outro" },
+  { name: "Intro", url: "/vite-micro-frontends" },
+  { name: "Pros and Cons", url: "/vite-micro-frontends/prosCons" },
+  {
+    name: "Monolith vs Micro-frontend",
+    url: "/vite-micro-frontends/monolithVsMicrofrontend",
+  },
+  { name: "Module Federation", url: "/vite-micro-frontends/moduleFederation" },
+  { name: "The Example", url: "/vite-micro-frontends/example" },
+  { name: "Outro", url: "/vite-micro-frontends/outro" },
 ] as const;

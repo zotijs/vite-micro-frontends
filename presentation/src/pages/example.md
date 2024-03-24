@@ -1,8 +1,9 @@
 ---
 layout: ../layouts/Layout.astro
 title: "The Example"
-previous: { name: "Module Federation", url: "/moduleFederation" }
-next: { name: "Outro", url: "/outro" }
+previous:
+  { name: "Module Federation", url: "/vite-micro-frontends/moduleFederation" }
+next: { name: "Outro", url: "/vite-micro-frontends/outro" }
 ---
 
 # The Example

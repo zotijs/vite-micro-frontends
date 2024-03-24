@@ -1,8 +1,12 @@
 ---
 layout: ../layouts/Layout.astro
 title: "Pros and Cons of Micro-frontends"
-next: { name: "Monolith vs Micro-frontend", url: "/monolithVsMicrofrontend" }
-previous: { name: "Intro", url: "/" }
+next:
+  {
+    name: "Monolith vs Micro-frontend",
+    url: "/vite-micro-frontends/monolithVsMicrofrontend",
+  }
+previous: { name: "Intro", url: "/vite-micro-frontends" }
 ---
 
 # Pros and Cons
