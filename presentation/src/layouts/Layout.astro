@@ -53,7 +53,7 @@ const { title, previous, next } = Astro.props.frontmatter || Astro.props;
       rgb(var(--accent-light)) 30%,
       white 60%
     );
-    --gray: 48, 49, 52;
+    --gray: 36, 41, 46;
     --white: 255, 255, 255;
     --space: 1rem;
   }
@@ -74,6 +74,15 @@ const { title, previous, next } = Astro.props.frontmatter || Astro.props;
       Courier New,
       monospace;
     background-color: rgba(var(--gray), 0.8);
+  }
+  blockquote {
+    background: rgb(var(--accent-gradient));
+    border-left: 10px solid rgb(var(--accent));
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+  }
+  blockquote p {
+    font-style: italic;
   }
   body {
     display: grid;

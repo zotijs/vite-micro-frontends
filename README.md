@@ -61,6 +61,7 @@ The `presentation` repository contains a static application created using [astro
 - https://microservices.io/
 - https://microfrontend.dev/
 - https://micro-frontends.org/
+- https://module-federation.io/
 - react-vite module federation example: https://github.com/originjs/vite-plugin-federation/tree/main/packages/examples/react-vite
 - vite guides: https://vitejs.dev/guide/
 - pnpm workspaces: https://pnpm.io/workspaces

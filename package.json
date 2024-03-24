@@ -9,7 +9,8 @@
     "build:remotes": "pnpm --parallel --filter \"./remotes/**\" build",
     "serve:remotes": "pnpm --parallel --filter \"./remotes/**\" serve",
     "dev:host": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 5000,5001,5002,5003",
+    "dev:presentation": "pnpm --filter \"./presentation\" dev",
+    "stop": "kill-port --port 5000,5001,5002,5003,4321",
     "add:module": "pnpm add -r"
   },
   "keywords": [

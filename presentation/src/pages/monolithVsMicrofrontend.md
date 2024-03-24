@@ -2,6 +2,7 @@
 layout: ../layouts/Layout.astro
 title: "Monolith vs Micro-frontend"
 previous: { name: "Pros and Cons", url: "/prosCons" }
+next: { name: "Module Federation", url: "/moduleFederation" }
 ---
 
 # Monolith vs Micro-frontend
