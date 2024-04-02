@@ -1,1 +1,1 @@
-export { WrappedCounter as Counter } from "./Counter";
+export { Counter } from "./Counter";

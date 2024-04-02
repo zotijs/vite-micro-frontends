@@ -19,7 +19,7 @@ type Props = {
   extraStyles?: string;
 };
 
-const Counter = ({
+const BaseCounter = ({
   incrementValue,
   decrementValue,
   counterValue,
@@ -32,7 +32,7 @@ const Counter = ({
   </div>
 );
 
-export const WrappedCounter = compose<ComponentType>(
+export const Counter = compose<ComponentType>(
   withModelActivation({ reducer: { name: "counter", value: counterReducer } }),
   connect(
     (state: unknown & { counter: CounterState }) => ({
@@ -40,4 +40,4 @@ export const WrappedCounter = compose<ComponentType>(
     }),
     { incrementValue: increment, decrementValue: decrement }
   )
-)(Counter);
+)(BaseCounter);

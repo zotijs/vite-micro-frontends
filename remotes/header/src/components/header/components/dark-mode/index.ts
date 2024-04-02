@@ -1,0 +1,1 @@
+export { withDarkMode } from "./withDarkMode";

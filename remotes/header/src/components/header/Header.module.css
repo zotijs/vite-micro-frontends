@@ -11,3 +11,8 @@
 .container > img {
   height: 32px;
 }
+
+.darkMode {
+  background-color: #fff;
+  color: #000;
+}
