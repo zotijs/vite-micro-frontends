@@ -20,6 +20,8 @@ The micro apps that will be used by the host. This structure, with a single host
 
 A react application from where we are going to import a `Header` component.
 
+This component also publishes events (messages) for the color mode via `window.postMessage` that all the other applications subscribe to.
+
 Generated using `pnpm create vite header --template react-swc-ts`
 
 ### Footer
