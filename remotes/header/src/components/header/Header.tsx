@@ -1,16 +1,14 @@
 import { clsx } from "clsx";
 
 import { withDarkMode } from "./components";
-import darkIcon from "./images/dark.svg";
-import lightIcon from "./images/light.svg";
 import styles from "./Header.module.css";
 
 export type HeaderProps = {
   logoSrc: string;
   appName: string;
   extraStyles?: string;
-  darkMode?: boolean;
-  toggleDarkMode?: () => void;
+  darkMode: boolean;
+  toggleDarkMode: () => void;
 };
 
 // TODO: implement injectable theming and replace the inline styles
@@ -26,14 +24,15 @@ const BaseHeader = ({
       [styles.darkMode]: darkMode,
     })}
   >
-    <img src={logoSrc} alt={`${appName} logo`} />
-    <h4>{appName}</h4>
-    <button onClick={toggleDarkMode}>
-      {darkMode ? (
-        <img src={lightIcon} alt="toggle light" />
-      ) : (
-        <img src={darkIcon} alt="toggle dark" />
-      )}
+    <div className={styles.logoContainer}>
+      <img className={styles.logoImage} src={logoSrc} alt={`${appName} logo`} />
+      <h4>{appName}</h4>
+    </div>
+    <button
+      className={clsx(styles.modeButton, { [styles.modeButtonDark]: darkMode })}
+      onClick={toggleDarkMode}
+    >
+      {darkMode ? "Light Mode" : "Dark Mode"}
     </button>
   </header>
 );

@@ -2,17 +2,38 @@
   height: 48px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  background-color: #000;
-  border-bottom: 1px solid #fff;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: #ffffff;
+  color: #242424;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.container > img {
-  height: 32px;
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.logoImage {
+  height: 24px;
 }
 
 .darkMode {
-  background-color: #fff;
-  color: #000;
+  color: #ffffff;
+  background-color: #242424;
+  border-bottom: 1px solid #303030;
+}
+
+.modeButton {
+  background-color: transparent;
+  border: none;
+  color: #242424;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.modeButtonDark {
+  color: #ffffff;
 }

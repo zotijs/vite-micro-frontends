@@ -6,14 +6,14 @@ import { Footer } from "remoteFooter/Footer";
 import { Counter } from "remoteCounter/Counter";
 
 import { withDarkMode } from "./components";
-import Logo from "./logo.svg";
+import Logo from "./mf.svg";
 
 import styles from "./App.module.css";
 
 const APP_NAME = "Module Federations Example";
 
 type Props = {
-  darkMode?: boolean;
+  darkMode: boolean;
 };
 
 const BaseApp = ({ darkMode }: Props) => (

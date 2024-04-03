@@ -2,7 +2,7 @@ import { type ComponentType, useState } from "react";
 
 export const withDarkMode =
   <P,>(Component: ComponentType<P>) =>
-  (props: P) => {
+  (props: Omit<P, "darkMode" | "toggleDarkMode">) => {
     const [darkMode, setDarkMode] = useState(false);
 
     const toggleDarkMode = () => {
@@ -15,7 +15,7 @@ export const withDarkMode =
 
     return (
       <Component
-        {...props}
+        {...(props as P)}
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
       />
