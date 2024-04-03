@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Layout.astro
 title: "Monolith vs Micro-frontend"
-previous: { name: "Pros and Cons", url: "/vite-micro-frontends/prosCons" }
+previous: { name: "Intro", url: "/vite-micro-frontends" }
 next:
   { name: "Module Federation", url: "/vite-micro-frontends/moduleFederation" }
 ---

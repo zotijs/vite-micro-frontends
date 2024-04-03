@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Layout.astro
 title: "Outro"
-previous: { name: "The Example", url: "/vite-micro-frontends/example" }
+previous: { name: "Pros and Cons", url: "/vite-micro-frontends/prosCons" }
 ---
 
 # Outro

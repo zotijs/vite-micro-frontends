@@ -3,7 +3,7 @@ layout: ../layouts/Layout.astro
 title: "The Example"
 previous:
   { name: "Module Federation", url: "/vite-micro-frontends/moduleFederation" }
-next: { name: "Outro", url: "/vite-micro-frontends/outro" }
+next: { name: "Pros and Cons", url: "/vite-micro-frontends/prosCons" }
 ---
 
 # The Example
@@ -19,7 +19,7 @@ Just for the shake of the example we have split the application into a single `h
 ```typescript
 export default defineConfig({
   plugins: [
-    react(),
+  ...
     federation({
       name: "header_app",
       filename: "headerRemoteEntry.js",
@@ -29,12 +29,7 @@ export default defineConfig({
       shared: ["clsx", "react", "react-dom"],
     }),
   ],
-  build: {
-    modulePreload: false,
-    target: "esnext",
-    minify: false,
-    cssCodeSplit: false,
-  },
+...
 });
 ```
 
@@ -48,7 +43,7 @@ The interesting parts of the above configuration are:
 ```typescript
 export default defineConfig({
   plugins: [
-    react(),
+...
     federation({
       name: "app",
       remotes: {
@@ -59,12 +54,7 @@ export default defineConfig({
       shared: ["@reduxjs/toolkit", "react", "react-dom", "react-redux"],
     }),
   ],
-  build: {
-    modulePreload: false,
-    target: "esnext",
-    minify: false,
-    cssCodeSplit: false,
-  },
+...
 });
 ```
 
@@ -78,6 +68,6 @@ As mentioned previously the application has a `host` and multiple `remotes` spli
 
 In detail:
 
-- `Header`: A react application from where we are going to import a `Header` component.
+- `Header`: A react application from where we are going to import a `Header` component. This application uses `window.postMessage` to publish events for the color mode of the entire application, that all other micro-frontends subscribe to.
 - `Footer`: A react application from where we are going to import a `Footer` component.
 - `Counter`: A react application from where we are going to import a `Counter` component. This is a stateful component that uses redux as the state management tool. In order to have a shared state between this remote and the host we are going to inject the counter reducer into the host's store. More info [this](https://github.com/module-federation/module-federation-examples/tree/master/redux-reducer-injection) webpack module federation example.

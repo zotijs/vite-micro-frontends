@@ -1,7 +1,11 @@
 ---
 layout: ../layouts/Layout.astro
 title: "What are micro-frontends?"
-next: { name: "Pros and Cons", url: "/vite-micro-frontends/prosCons" }
+next:
+  {
+    name: "Monolith vs Micro-frontend",
+    url: "/vite-micro-frontends/monolithVsMicrofrontend",
+  }
 ---
 
 # What are Micro-frontends?
